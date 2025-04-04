@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amplifier 2025 - Register Now</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: #0d001a;
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 0, 255, 0.1), transparent 70%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #ff00ff;
+            text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+            letter-spacing: 5px;
+        }
+
+        .registration-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            gap: 80px;
+            padding: 60px 0;
+        }
+
+        .event-info {
+            max-width: 450px;
+            background: rgba(20, 0, 40, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+            transform: perspective(1000px) rotateY(5deg);
+        }
+
+        .event-info h2 {
+            font-size: 2.5rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+            margin-bottom: 20px;
+        }
+
+        .event-info p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .registration-form {
+            background: rgba(20, 0, 40, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            width: 450px;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            transform: perspective(1000px) rotateY(-5deg);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #00ffff;
+            background: rgba(0, 255, 255, 0.05);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff00ff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 8px;
+            color: #0d001a;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.8);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Amplifier 2025</h1>
+    </header>
+
+    <section class="registration-section">
+        <div class="event-info">
+            <h2>Event Details</h2>
+            <p><strong>Organized by:</strong> Department of Electronics, Sri Venkateswara College, University of Delhi</p>
+            <p><strong>Date:</strong> 11 April 2025</p>
+            <p><strong>Reporting Time:</strong> 9:00 AM</p>
+            <p><strong>Hackathon Time:</strong> 10:00 AM - 4:00 PM</p>
+            <p><strong>Venue:</strong> ICT Lab - 2</p>
+        </div>
+
+        <div class="registration-form">
+            <h2>Register Now</h2>
+            <form id="regForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="team">Team Name (Optional)</label>
+                    <input type="text" id="team" name="team">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // Your Google Apps Script Web App URL
+        const scriptURL = 'https://script.google.com/a/macros/svc.du.ac.in/s/AKfycbxmXfROhunY77oed9VnNS-X7u3RWkeCJe7fPFotNNnMZf5664xyaxIDgD1KK9v9arItcg/exec';
+
+        // GSAP Animations
+        gsap.from(".title", {
+            duration: 2,
+            y: -150,
+            opacity: 0,
+            ease: "elastic.out(1, 0.5)"
+        });
+
+        gsap.from(".event-info", {
+            duration: 1.5,
+            x: -300,
+            opacity: 0,
+            delay: 0.5,
+            ease: "power4.out",
+            rotateY: 360
+        });
+
+        gsap.from(".registration-form", {
+            duration: 1.5,
+            x: 300,
+            opacity: 0,
+            delay: 0.7,
+            ease: "power4.out",
+            rotateY: -360
+        });
+
+        gsap.from(".form-group", {
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            stagger: 0.2,
+            delay: 1.2,
+            ease: "back.out(1.7)"
+        });
+
+        // Form Submission to Google Sheets
+        const form = document.getElementById('regForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    alert('Registration successful! Your details have been saved.');
+                    form.reset();
+                } else {
+                    alert('Error submitting registration. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
+</body>
+</html>
